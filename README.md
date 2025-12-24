@@ -1,4 +1,6 @@
-# Portable Updater (Go) — Cross-platform Self-Update Library + CLI
+# go-autoupdater
+
+## Portable Updater (Go) — Cross-platform Self-Update Library + CLI
 
 A small, dependency-free updater framework written in Go that supports:
 
