@@ -1,0 +1,42 @@
+# Go build artifacts
+/bin/
+/dist/
+/out/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.a
+*.o
+
+# Logs
+*.log
+
+# Updater staging/backup artifacts
+*.new
+*.old
+*.part
+*.new.exe
+*.old.exe
+*.bad
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# OS
+Thumbs.db
+
+# Env/Secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+
+# Coverage
+coverage.out
