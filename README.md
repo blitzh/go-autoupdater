@@ -451,3 +451,10 @@ See [Roadmap](#roadmap) for planned tasks.
 
 This project is licensed under the **MIT License**.  
 See the [LICENSE](./LICENSE) file for details.
+
+---
+
+## Author
+
+Arif Kurniawan  
+GitHub: @therif / @blitzh
