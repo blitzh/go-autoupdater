@@ -169,23 +169,23 @@ go build -o updater-helper.exe .\cmd\updater-helper
 ## Windows + NSSM
 
 ### Example
-- Service name: `FCKAgent`
-- Install dir: `C:\fck\agent`
+- Service name: `SampleAgent`
+- Install dir: `C:\sample\agent`
 - Executable: `agent.exe`
 - NSSM path: `C:\tools\nssm.exe`
 
 ```powershell
 updaterctl.exe `
-  --manifest "https://server1.fcktool.com/dldir/agent/manifest.json" `
-  --dir "C:\fck\agent" `
+  --manifest "https://your-server.example.com/dldir/agent/manifest.json" `
+  --dir "C:\sample\agent" `
   --exe "agent.exe" `
   --current "1.0.11" `
-  --service "FCKAgent" `
+  --service "SampleAgent" `
   --nssm "C:\tools\nssm.exe"
 ```
 
 **Important**
-- `updater-helper.exe` must be in `C:\fck\agent\updater-helper.exe`
+- `updater-helper.exe` must be in `C:\sample\agent\updater-helper.exe`
 
 ---
 
@@ -195,11 +195,11 @@ If you do not use NSSM and rely on the built-in Windows Service Controller:
 
 ```powershell
 updaterctl.exe `
-  --manifest "https://server1.fcktool.com/dldir/agent/manifest.json" `
-  --dir "C:\fck\agent" `
+  --manifest "https://your-server.example.com/dldir/agent/manifest.json" `
+  --dir "C:\sample\agent" `
   --exe "agent.exe" `
   --current "1.0.11" `
-  --service "FCKAgent" `
+  --service "SampleAgent" `
   --nssm "SC"
 ```
 
@@ -211,7 +211,7 @@ updaterctl.exe `
 
 ```bash
 sudo ./updaterctl \
-  --manifest "https://server1.fcktool.com/dldir/agent/manifest.json" \
+  --manifest "https://your-server.example.com/dldir/agent/manifest.json" \
   --dir "/opt/agent" \
   --exe "agent" \
   --current "1.0.11" \
@@ -224,7 +224,7 @@ sudo ./updaterctl \
 
 ```bash
 ./updaterctl \
-  --manifest "https://server1.fcktool.com/dldir/agent/manifest.json" \
+  --manifest "https://your-server.example.com/dldir/agent/manifest.json" \
   --dir "/usr/local/agent" \
   --exe "agent" \
   --current "1.0.11" \
@@ -239,7 +239,7 @@ sudo ./updaterctl \
 
 ```bash
 ./updaterctl \
-  --manifest "https://server1.fcktool.com/dldir/agent/manifest.json" \
+  --manifest "https://your-server.example.com/dldir/agent/manifest.json" \
   --dir "./" \
   --exe "agent" \
   --current "1.0.11"
@@ -270,7 +270,7 @@ import (
 func main() {
   logger := util.NewLogger("./updater.log")
 
-  src := source.NewHTTPManifestSource("https://server1.fcktool.com/dldir/agent/manifest.json")
+  src := source.NewHTTPManifestSource("https://your-server.example.com/dldir/agent/manifest.json")
 
   // Standalone mode:
   ctrl := service.NoopController{}

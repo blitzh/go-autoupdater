@@ -1,0 +1,23 @@
+{
+  "product": "agent",
+  "channel": "stable",
+  "version": "1.0.12",
+  "published_at": "2025-12-24T00:00:00Z",
+  "notes": "Fix reconnect + reduce log spam",
+  "artifacts": [
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "name": "agent.exe",
+      "url": "https://your-server.example.com/dldir/agent/agent_1.0.12_windows_amd64.exe",
+      "sha256": "PUT_SHA256_HERE"
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "name": "agent",
+      "url": "https://your-server.example.com/dldir/agent/agent_1.0.12_linux_arm64",
+      "sha256": "PUT_SHA256_HERE"
+    }
+  ]
+}
